@@ -46,6 +46,40 @@ header#cabecalho img#icone {
     top: 70px;
 }
 
+section#corpo {
+    display: block;
+    width: 500px;
+    float: left;
+    border-right: 1px solid black;
+    padding-right: 20px;
+}
+
+aside#lateral {
+    display: block;
+    width: 350px;
+    float: right;
+}
+
+footer#rodape {
+    clear: both;
+    border-top: 1px solid black;
+}
+
+footer#rodape p {
+    text-align: center;
+    margin: 5px;
+}
+
+footer#rodape a {
+    text-decoration: none;
+    color: black;
+}
+
+footer#rodape a:hover {
+    color: blue;
+    transition: color 1s;
+}
+
 figure.foto-legenda {
     border: 5px solid white;
     box-shadow: 1px 1px 4px black; /*Para fazer sombreamento: deslocasmento horizontal, deslocamento vertical, espalhamento, cor*/
