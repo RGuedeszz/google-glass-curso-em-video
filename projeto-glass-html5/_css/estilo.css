@@ -54,6 +54,19 @@ section#corpo {
     padding-right: 20px;
 }
 
+table#tabelaspec {
+    border: 1px solid #606060;
+    border-spacing: 0px;
+    /*Centralizar o objeto (tabela)*/
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table#tabelaspec td {
+    border: 1px solid #606060;
+    padding: 7px;
+}
+
 aside#lateral {
     display: block;
     width: 350px;
