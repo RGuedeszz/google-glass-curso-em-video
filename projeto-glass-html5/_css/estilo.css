@@ -54,4 +54,18 @@ nav#menu li {
     background-color:rgba(38, 155, 145, 0.555);
     padding: 4px;
     margin: 4px;
+    transition: background-color 1s;
+}
+
+nav#menu li:hover {
+    background-color: #606060;
+}
+
+nav#menu a {
+    color: black;
+    text-decoration: none;
+}
+
+nav#menu a:hover {
+    color: blanchedalmond;
 }
