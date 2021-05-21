@@ -67,6 +67,33 @@ table#tabelaspec td {
     padding: 7px;
 }
 
+table#tabelaspec td.objeto {
+    text-align: right;
+    background-color: #606060;
+    color: white;
+    vertical-align: top;
+    font-weight: bold;
+}
+
+table#tabelaspec td.conteudo {
+    text-align: left;
+    background-color: #cecece;
+}
+
+table#tabelaspec caption {
+    color: #888888;
+    font-size: 13pt;
+    font-weight: bolder;
+}
+
+table#tabelaspec caption span {
+    display: block;
+    float: right;
+    color: #000000;
+    font-size: 9pt;
+    margin-top: 10px;
+}
+
 aside#lateral {
     display: block;
     width: 350px;
