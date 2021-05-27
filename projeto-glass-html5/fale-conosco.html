@@ -7,6 +7,19 @@
         <link rel="stylesheet" type="text/css" href="_css/estilo.css">
         <link rel="stylesheet" type="text/css" href="_css/form.css">
         <script src="_javascript/funcoes.js"></script>
+        <script>
+            function calcTotal() {
+                let valorUn = 1500;
+                var qtd = parseInt(document.getElementById("quant").value);
+                var total = qtd * valorUn;
+                if (qtd > 0) {
+                    document.getElementById("total").value = total;
+                } else {
+                    document.getElementById("total").value = "";
+                }
+
+            }
+        </script>
     </head>
 
     <body>
@@ -40,7 +53,7 @@
                         <h3 id="atualizacao">Atualizado em 01/Maio/2013</h3>
                     </header>
 
-                    <form method="POST" id="fContato" action="mailto:rogerguedes123@hotmail.com">
+                    <form method="POST" id="fContato" action="mailto:rogerguedes123@hotmail.com" oninput="calcTotal()">
                         <fieldset id="usuario">
                             <legend>Identificação do Usuário</legend>
                             <p><label for="cNome">Nome: </label><input type="text" name="tNome" id="cNome" size="30" maxlength="30" placeholder="Nome Completo"></p>
@@ -76,7 +89,8 @@
                                     </optgroup>
                                 </select>
                             </label></p>
-                            <p><label for="cCidade">Cidade:<input type="text" name="tCidade" id="cCidade" placeholder="Cidade" list="cidades"></label></p>
+                            <p><label for="cCidade">Cidade:</label>
+                            <input type="text" name="tCidade" id="cCidade" placeholder="Cidade" list="cidades"></p>
                             <datalist id="cidades">
                                 <option>Recife</option>
                                 <option>Paulista</option>
@@ -89,19 +103,19 @@
                         
                         <fieldset id="mensagem">
                             <legend>Mensagem do Usuário</legend>
-                            <p><label for="cCidade">Grau de Urgência:<input type="range" name="tGrau" id="cGrau" min="0" max="10" step="2"></label></p>
-                            <p><label for="cCidade">Mensagem: <textarea name="tMsg" id="cMsg" cols="45" rows="5" placeholder="Envie uma mensagem"></textarea></label></p>
+                            <p><label for="cGrau">Grau de Urgência:<input type="range" name="tGrau" id="cGrau" min="0" max="10" step="2"></label></p>
+                            <p><label for="cMsg">Mensagem: <textarea name="tMsg" id="cMsg" cols="45" rows="5" placeholder="Envie uma mensagem"></textarea></label></p>
                         </fieldset>
                     
                         <fieldset id="pedido">
                             <legend>Quero um Google Glass</legend>
-                            Gostaria de adquirir um Google Glass quando disponível
-                            Cor:
-                            Quantidade:
-                            Preço Total: R$
+                            <p><input type="checkbox" checked> Gostaria de adquirir um Google Glass quando disponível</p>
+                            <p>Cor: <input type="color"></p>
+                            <p>Quantidade: <input type="number" id="quant" min="0" max="20"></p>
+                            <p>Preço Total: R$<input type="text" name="tot" id="total" readonly></p>
                         </fieldset>
 
-                    [BOTÃO ENVIAR]
+                    <input type="image" src="_imagens/botao-enviar.png">
                     </form>
                     
                 </article>
